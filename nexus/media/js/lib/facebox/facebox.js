@@ -81,19 +81,22 @@
    * Public, $.facebox methods
    */
 
+  var nexusMediaPreix = $('#nexus-facebox-constants').attr('data-nexus-media-prefix'),
+      closeImage = nexusMediaPrefix + 'nexus/img/facebox/closelabel.gif';
+
   $.extend($.facebox, {
     settings: {
       opacity      : 0.2,
       overlay      : true,
-      loadingImage : NEXUS.facebox.loadingImage,
-      closeImage   : NEXUS.facebox.closeImage,
+      loadingImage : nexusMediaPrefix + 'nexus/img/facebox/loading.gif',
+      closeImage   : closeImage,
       imageTypes   : [ 'png', 'jpg', 'jpeg', 'gif' ],
       faceboxHtml  : '\
     <div id="facebox" style="display:none;"> \
       <div class="popup"> \
         <div class="content"> \
         </div> \
-        <a href="#" class="close"><img src="' + NEXUS.facebox.closeImage + '" title="close" class="close_image" /></a> \
+        <a href="#" class="close"><img src="' + closeImage + '" title="close" class="close_image" /></a> \
       </div> \
     </div>'
     },

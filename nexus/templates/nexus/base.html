@@ -13,18 +13,12 @@
 
         <meta name="robots" content="NONE,NOARCHIVE">
 
-        <script>
-            var NEXUS = {
-                facebox: {
-                    loadingImage: "{% nexus_media_prefix %}/nexus/img/facebox/loading.gif",
-                    closeImage:   "{% nexus_media_prefix %}/nexus/img/facebox/closelabel.png"
-                }
-            };
-        </script>
-
         <script src="{% nexus_media_prefix %}/nexus/js/lib/jquery.js"></script>
         <script src="{% nexus_media_prefix %}/nexus/js/lib/jquery.tmpl.js"></script>
-        <script src="{% nexus_media_prefix %}/nexus/js/lib/facebox/facebox.js"></script>
+        <script src="{% nexus_media_prefix %}/nexus/js/lib/facebox/facebox.js"
+                id="nexus-facebox-constants"
+                data-nexus-media-prefix="{% nexus_media_prefix %}"
+            ></script>
         <script src="{% nexus_media_prefix %}/nexus/js/nexus.js"
                 id="nexus-constants"
                 data-csrf-cookie-name="{% nexus_csrf_cookie_name %}"
